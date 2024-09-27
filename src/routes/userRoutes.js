@@ -25,10 +25,10 @@ router.post('user/register', (req, res) => {
 
 // Ruta para loguear un usuario
 router.post('/user/login', (req, res) => {
-  const { name, email } = req.body;
+  const { usuario, pass } = req.body;
 
   // Validación de los campos
-  if (!name || !email) {
+  if (!usuario || !pass) {
     return response.error(req, res, 400, 'Todos los campos son obligatorios');
   }
 
